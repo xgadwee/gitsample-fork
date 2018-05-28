@@ -50,22 +50,22 @@
 
   <properties>
     <calc-version>0.1.0-SNAPSHOT</calc-version>
-    <tycho-version>0.22.0</tycho-version>
+    <tycho-version>1.0.0</tycho-version>
     <junit-version>4.8.1</junit-version>
   </properties>
 
   <profiles>
     <profile>
-      <id>platform-mars</id>
+      <id>platform-oxygen</id>
       <activation>
         <activeByDefault>true</activeByDefault>
         <property>
           <name>platform-version-name</name>
-          <value>mars</value>
+          <value>oxygen</value>
         </property>
       </activation>
       <properties>
-        <eclipse-site>http://download.eclipse.org/releases/mars</eclipse-site>
+        <eclipse-site>http://download.eclipse.org/releases/oxygen</eclipse-site>
       </properties>
     </profile>
     <profile>
@@ -77,7 +77,7 @@
         </property>
       </activation>
       <properties>
-        <eclipse-site>http://download.eclipse.org/releases/helios</eclipse-site>
+        <eclipse-site>http://download.eclipse.org/releases/neon</eclipse-site>
       </properties>
     </profile>
  
@@ -95,16 +95,6 @@
       <url>${eclipse-site}</url>
     </repository>
   </repositories>
-
-  <pluginRepositories>
-    <pluginRepository>
-      <!-- need maven-findbugs-2.3.2-SNAPSHOT, see
-           http://jira.codehaus.org/browse/MFINDBUGS-122
-           remove this when this version is released -->
-      <id>codehaus.snapshots</id>
-      <url>http://snapshots.repository.codehaus.org/</url>
-    </pluginRepository>
-  </pluginRepositories>
 
 <build>
     <plugins>
@@ -173,64 +163,6 @@
               </goals>
             </execution>
           </executions>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-resources-plugin</artifactId>
-          <version>2.5</version>
-          <configuration>
-            <encoding>ISO-8859-1</encoding>
-          </configuration>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-antrun-plugin</artifactId>
-          <version>1.7</version>
-        </plugin>
-        <plugin>
-          <groupId>org.codehaus.mojo</groupId>
-          <artifactId>findbugs-maven-plugin</artifactId>
-          <version>2.3.2</version>
-          <configuration>
-            <findbugsXmlOutput>true</findbugsXmlOutput>
-            <failOnError>false</failOnError>
-          </configuration>
-          <executions>
-            <execution>
-              <goals>
-                <goal>check</goal>
-              </goals>
-            </execution>
-          </executions>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-pmd-plugin</artifactId>
-          <version>2.6</version>
-          <configuration>
-            <sourceEncoding>utf-8</sourceEncoding>
-            <minimumTokens>100</minimumTokens>
-            <targetJdk>1.5</targetJdk>
-            <format>xml</format>
-            <failOnViolation>false</failOnViolation>
-          </configuration>
-          <executions>
-            <execution>
-              <goals>
-                <goal>cpd-check</goal>
-              </goals>
-            </execution>
-          </executions>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-assembly-plugin</artifactId>
-          <version>2.2.1</version>
-        </plugin>
-        <plugin>
-          <groupId>org.eclipse.dash.maven</groupId>
-          <artifactId>eclipse-signing-maven-plugin</artifactId>
-          <version>1.0.5</version>
         </plugin>
       </plugins>
     </pluginManagement>
