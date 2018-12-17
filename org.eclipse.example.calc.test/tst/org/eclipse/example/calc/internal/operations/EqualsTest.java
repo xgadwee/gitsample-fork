@@ -19,6 +19,7 @@ public class EqualsTest extends AbstractOperationTest {
 	private Operation op;
 
 	@Before
+	
 	public void setUp() throws Exception {
 		op = new Equals();
 	}
