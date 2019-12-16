@@ -34,7 +34,7 @@ public class CalculatorUI extends JFrame implements TextProvider,
 	private static final long serialVersionUID = 1L;
 
 	private Calculator calculator;
-
+// test
 	private JTextField display;
 
 	private JPanel buttonsPanel;
