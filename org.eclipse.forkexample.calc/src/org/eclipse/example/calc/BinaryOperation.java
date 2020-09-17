@@ -13,6 +13,7 @@ package org.eclipse.example.calc;
  */
 public interface BinaryOperation extends Operation {
 	/**
+	 * hier fehlt eine beschreibung 
 	 * @param arg1 first parameter
 	 * @param arg2 second parameter
 	 * @return result of binary operation
