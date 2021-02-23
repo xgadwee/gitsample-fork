@@ -19,7 +19,7 @@
     <version>0.1.0-SNAPSHOT</version>
   </parent>
 
-  <artifactId>org.eclipse.example.calc</artifactId>
+  <artifactId>org.eclipse.forkexample.calc</artifactId>
   <packaging>eclipse-plugin</packaging>
   <version>0.1.0-SNAPSHOT</version>
 

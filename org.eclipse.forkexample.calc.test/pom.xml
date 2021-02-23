@@ -19,7 +19,7 @@
     <version>0.1.0-SNAPSHOT</version>
   </parent>
 
-  <artifactId>org.eclipse.example.calc.test</artifactId>
+  <artifactId>org.eclipse.forkexample.calc.test</artifactId>
   <packaging>eclipse-test-plugin</packaging>
   <version>0.1.0-SNAPSHOT</version>
   
