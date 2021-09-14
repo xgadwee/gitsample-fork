@@ -11,7 +11,7 @@ package org.eclipse.example.calc;
 public interface Operation {
 	/**
 	 * @return name of the operation
-	 */
+	 */ 
 	public String getName();
 }
 
