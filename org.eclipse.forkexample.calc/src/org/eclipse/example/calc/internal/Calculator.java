@@ -17,6 +17,7 @@ import org.eclipse.example.calc.internal.operations.Equals;
 import org.eclipse.example.calc.internal.operations.Minus;
 import org.eclipse.example.calc.internal.operations.Plus;
 import org.eclipse.example.calc.internal.operations.Square;
+import org.eclipse.example.calc.internal.operations.DoubleMinus;
 
 public class Calculator {
 
@@ -35,12 +36,14 @@ public class Calculator {
 		setupDefaultOperations();
 	}
 
+	// hier sind die Operationen
 	private void setupDefaultOperations() {
 	    // Das ist der erste Kommentar in masterGithub
 	    // Das ist der zweite Kommentar in master
 	    // auch noch ein Kommentar von Ruth
 		new Equals();
 		new Minus();
+		new DoubleMinus();
 		new Plus();
 		new Square();
 	}
